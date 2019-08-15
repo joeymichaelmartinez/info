@@ -8,11 +8,7 @@ function AppRouter() {
   return (
     <Router>
       <div>
-<<<<<<< HEAD
-        <Route path="/" exact component={Home} />
-=======
-        <Route path="/home" exact component={Home} />
->>>>>>> 76829f0b7451e43ae9e048f05e1e6a3748b2af1c
+        <Route path="/home/" exact component={Home} />
         <Route path="/GameDesign/" component={GameDesign} />
         <Route path="/OtherProjects/" component={OtherProjects} />
       </div>
