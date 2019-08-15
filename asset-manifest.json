@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.add13ae5.chunk.css",
-    "main.js": "/home/static/js/main.a89e88fb.chunk.js",
-    "main.js.map": "/home/static/js/main.a89e88fb.chunk.js.map",
-    "runtime~main.js": "/home/static/js/runtime~main.0990ee84.js",
-    "runtime~main.js.map": "/home/static/js/runtime~main.0990ee84.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "/home/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.467a0a1a.chunk.js": "/home/static/js/2.467a0a1a.chunk.js",
-    "static/js/2.467a0a1a.chunk.js.map": "/home/static/js/2.467a0a1a.chunk.js.map",
-    "index.html": "/home/index.html",
-    "precache-manifest.214f4dfc496cb6a8615e4c5a2735169e.js": "/home/precache-manifest.214f4dfc496cb6a8615e4c5a2735169e.js",
-    "service-worker.js": "/home/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "/home/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.add13ae5.chunk.css.map": "/home/static/css/main.add13ae5.chunk.css.map",
-    "static/media/Headshot.jpg": "/home/static/media/Headshot.8b2588ce.jpg",
-    "static/media/JosephMartinezResume.pdf": "/home/static/media/JosephMartinezResume.7cb80d22.pdf"
+    "main.css": "/info/static/css/main.add13ae5.chunk.css",
+    "main.js": "/info/static/js/main.5cf0cf60.chunk.js",
+    "main.js.map": "/info/static/js/main.5cf0cf60.chunk.js.map",
+    "runtime~main.js": "/info/static/js/runtime~main.981a018a.js",
+    "runtime~main.js.map": "/info/static/js/runtime~main.981a018a.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/info/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.467a0a1a.chunk.js": "/info/static/js/2.467a0a1a.chunk.js",
+    "static/js/2.467a0a1a.chunk.js.map": "/info/static/js/2.467a0a1a.chunk.js.map",
+    "index.html": "/info/index.html",
+    "precache-manifest.0f1beffa644b8cb7a707b9d3b9ad5d64.js": "/info/precache-manifest.0f1beffa644b8cb7a707b9d3b9ad5d64.js",
+    "service-worker.js": "/info/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/info/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.add13ae5.chunk.css.map": "/info/static/css/main.add13ae5.chunk.css.map",
+    "static/media/Headshot.jpg": "/info/static/media/Headshot.8b2588ce.jpg",
+    "static/media/JosephMartinezResume.pdf": "/info/static/media/JosephMartinezResume.7cb80d22.pdf"
   }
 }
