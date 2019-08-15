@@ -12,7 +12,11 @@
     "react-pdf": "^4.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
+<<<<<<< HEAD
     "react-scripts": "3.0.1"
+=======
+    "react-scripts": "^3.0.1"
+>>>>>>> 76829f0b7451e43ae9e048f05e1e6a3748b2af1c
   },
   "scripts": {
     "start": "react-scripts start",
