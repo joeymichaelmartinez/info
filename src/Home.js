@@ -22,10 +22,10 @@ function Home() {
               <a href = {Pdf} target = "_blank" rel="noopener noreferrer">Download Pdf</a>
             </div>
             <div className="info-link col-sm-4">
-              <Link to="/GameDesign/">GameDesign</Link>
+              <Link to="/game-design/">GameDesign</Link>
             </div>
             <div className="info-link col-sm-4">
-              <Link to="/OtherProjects/">Other Projects</Link>
+              <Link to="/other-projects/">Other Projects</Link>
             </div>
           </div>
       </div>

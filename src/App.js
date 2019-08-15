@@ -8,9 +8,9 @@ function AppRouter() {
   return (
     <Router>
       <div>
-        <Route path="/home/" exact component={Home} />
-        <Route path="/GameDesign/" component={GameDesign} />
-        <Route path="/OtherProjects/" component={OtherProjects} />
+        <Route path="/home" exact component={Home} />
+        <Route path="/game-design/" component={GameDesign} />
+        <Route path="/other-projects/" component={OtherProjects} />
       </div>
     </Router>
   );
