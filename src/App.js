@@ -8,7 +8,7 @@ function AppRouter() {
   return (
     <Router>
       <div>
-        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
         <Route path="/GameDesign/" component={GameDesign} />
         <Route path="/OtherProjects/" component={OtherProjects} />
       </div>
