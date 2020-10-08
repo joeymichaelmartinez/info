@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+  display: inline-block;
+  font-family: sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  overflow-y: scroll;
+}
+
+#main-container {
+	/* overflow: auto; */
+	/* flex-flow: column;
+	scroll-snap-type: y mandatory;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: center;
+	scroll-snap-stop: always;
+	overflow-y: scroll; */
+}
+
+.header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.headshot {
+  width:200px;
+}
+
+.projects-container {
+  text-align: center;
+}
+
+.project {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.info-link {
+  display: inline-block;
+  border: 1px solid black;
+}
+
+#sidebar-wrapper, #page-content-wrapper {
+  padding-left: 0;
+}
+
+#page-content-wrapper > * {
+	border-bottom: 1px solid white;
+	padding: 1rem;
+	height: 100vh;
+	text-align: center;
+	position: relative;
+	/* scroll-snap-align: center; */
+}
+
+#section-2 {
+	scroll-margin: 100px !important;
+}
+
+h1	{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: white;
+	width: 100%;
+	left: 0;
+	font-size: calc(1rem + 3vw);
+}
+
+html {
+	/* scroll-padding: 40px;
+	scroll-margin: 1000px;
+	font-family: sans-serif;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: top;
+	scroll-snap-stop: always; */
+}

@@ -1,0 +1,40 @@
+
+  
+  .container {
+    display: flex;
+    /* overflow: auto; */
+  }
+  
+  .container.y {
+    flex-flow: column nowrap;
+  }
+  
+  .y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .x.proximity-scroll-snapping {
+    scroll-snap-type: x proximity;
+  }
+  
+  .y.proximity-scroll-snapping {
+    scroll-snap-type: y proximity;
+  }
+  
+  .container > div {
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+  }
+  
+  .y.container > div {
+    /* line-height: 256px; */
+    /* font-size: 128px; */
+    /* width: 256px; */
+    height: 100%;
+  }
+  /* appearance fixes */
+  .y.container > div:first-child {
+    line-height: 1.3;
+    font-size: 64px;
+  }

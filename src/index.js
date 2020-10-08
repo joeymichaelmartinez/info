@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import './index.css';
+import './style/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// let app = <App/>
-let app = <h1>Under Construction</h1>
+let app = <App/>
+// let app = <h1>Under Construction</h1>
 
 ReactDOM.render(app, document.getElementById('root'));
 
