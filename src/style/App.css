@@ -7,15 +7,17 @@
   scroll-snap-type: y mandatory;
   scroll-snap-align: center;
   scroll-snap-stop: always; */
-  overflow: auto; 
+  /* overflow: auto;  */
+
 }
 
 #sidebar-wrapper, #page-content-wrapper {
-  /* padding-left: 0; */
+  padding-left: 0;
 }
 
 #container {
-  /* display: flex; */
+  padding: 0;
+  display: flex;
   flex-direction: column;
   position: absolute;
   overflow: auto;
@@ -23,6 +25,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+  /* TODO: FIX THIS MARGIN HACK */
+  margin-left:16.678%;
+  max-width: 83.333334%;
+  /* background-color: floralwhite; */
 }
 
 .page {
@@ -50,4 +56,12 @@
 .third-page {
   height: 100%;
   min-height: 100%;
+}
+
+.active {
+  color: red;
+}
+
+.row {
+  margin: 0;
 }

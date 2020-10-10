@@ -5,12 +5,10 @@ import {Container, Row, Col, Card, Form, Button, Carousel } from "react-bootstra
 import Home from './Home';
 import GameDesign from './GameDesign';
 import OtherProjects from './OtherProjects';
-import Scrollspy from 'react-scrollspy';
 import ScrollSnap from 'scroll-snap';
-import './style/App.css';  
-import './style/style.css'; 
-// import './style/Home.css';
-// import './style/styles.css';
+import './style/App.css';
+import  { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import ResponsiveMenu from 'react-responsive-navbar';
 
 function callback() {
   console.log('snapped');
@@ -48,12 +46,39 @@ const snapConfig = {
 }
 
 class AppRouter extends React.Component {
-  
 
+  constructor(props) {
+    super(props);
+    this.scrollToTop = this.scrollToTop.bind(this);
+  }
+
+  componentDidMount() {
+    Events.scrollEvent.register('begin', function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function () {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  }
+  
   container = React.createRef()
 
   bindScrollSnap() {
     const element = this.container.current
+    // console.log(element)
     const snapElement = new ScrollSnap(element, 
       snapConfig
     )
@@ -69,24 +94,43 @@ class AppRouter extends React.Component {
   return (
     <Router>
       <div className="App">
-        <div id="container" ref={this.container}>
-          <section id="section-1" className="first-page page">
+      <Row>
+      <Col xs={2} id="sidebar-wrapper">
+      <Link activeClass="active" to="section-1" spy={true} smooth={true} duration={250} containerId="container" style={{ display: 'block', margin: '15px' }}>
+        About Me    
+      </Link>
+
+        <Link activeClass="active" to="section-2" spy={true} smooth={true} duration={250} containerId="container" style={{ display: 'block', margin: '15px' }}>
+          Personal Projects
+        </Link>
+
+        <Link activeClass="active" to="section-3" spy={true} smooth={true} duration={250} containerId="container" style={{ display: 'block', margin: '15px' }}>
+          Game Design Projects
+        </Link>
+        </Col>
+        {/* <Col xs={10} id="page-content-wrapper"> */}
+       <div name="test7" className="element" id="container" ref={this.container} style={{
+          // position: 'relative',
+          // height: '200px',
+          // overflow: 'scroll',
+          // marginBottom: '100px'
+        }}>
+      {/* <div className="App"> */}
+        {/* <div id="container" ref={this.container}> */}
+          <section name="section-1" id="section-1" className="first-page page">
             <Home />  
           </section>
-          <section id="section-2" className="second-page page">
+          <section name="section-2" id="section-2" className="second-page page">
             <OtherProjects />
           </section>
-          <section id="section-3" className="third-page page">
+          <section name="section-3" id="section-3" className="third-page page">
             <GameDesign />  
           </section>
-          </div> 
-          <Scrollspy 
-            className="scrollspy" items={ ['section-1', 'section-2', 'section-3'] } 
-            currentClassName="isCurrent">
-            <li><a href="#section-1">section 1</a></li>
-            <li><a href="#section-2">section 2</a></li>
-            <li><a href="#section-3">section 3</a></li>
-          </Scrollspy>
+          {/* </div> */}
+        {/* </div> */}
+        </div>
+        {/* </Col> */}
+        </Row>
         </div>
     </Router>
   );
