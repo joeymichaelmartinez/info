@@ -1,20 +1,3 @@
-.App {
-  /* text-align: center;
-  display: inline-block;
-  font-family: sans-serif;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: center;
-  scroll-snap-stop: always; */
-  /* overflow: auto;  */
-
-}
-
-#sidebar-wrapper, #page-content-wrapper {
-  padding-left: 0;
-}
-
 #container {
   padding: 0;
   display: flex;
@@ -28,7 +11,6 @@
   /* TODO: FIX THIS MARGIN HACK */
   margin-left:16.678%;
   max-width: 83.333334%;
-  /* background-color: floralwhite; */
 }
 
 .page {
@@ -43,17 +25,17 @@
   border-bottom: 1px solid #ffffff;
 }
 
-.first-page {
+.section-1 {
   height: 100%;
   min-height: 100%;
 }
 
-.second-page {
+.section-2 {
   height: 100%;
   min-height: 100%;
 }
 
-.third-page {
+.section-3 {
   height: 100%;
   min-height: 100%;
 }

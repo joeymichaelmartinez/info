@@ -28,3 +28,8 @@ h1	{
 	left: 0;
 	font-size: calc(1rem + 3vw);
 } */
+
+.Headshot {
+	width:200px;
+	height: 500px;
+}
