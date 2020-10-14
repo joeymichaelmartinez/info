@@ -1,4 +1,16 @@
 .SideNavbar-Link {
   display: block; 
   margin: 15px;
+  color: #D6E7FF;
 }
+
+.SideNavbar-Link:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  color: #28B8FF !important;
+}
+

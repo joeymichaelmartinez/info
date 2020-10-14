@@ -41,10 +41,10 @@
   min-height: 100%;
 }
 
-.active {
-  color: red;
-}
-
 .row {
   margin: 0;
+}
+
+#SideNavbar-wrapper {
+  padding-top: 20%;
 }

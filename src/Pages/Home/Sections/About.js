@@ -1,6 +1,6 @@
 import React from 'react';
-import Headshot from '../../assets/images/Headshot.jpg';
-import Pdf from '../../assets/JosephMartinezResume.pdf';
+import Headshot from '../../../assets/images/Headshot.jpg';
+import Pdf from '../../../assets/JosephMartinezResume.pdf';
 import { Link } from "react-router-dom";
 
 function About() {

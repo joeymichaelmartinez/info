@@ -5,7 +5,7 @@ import ScrollSnap from 'scroll-snap';
 import  { scrollSpy } from 'react-scroll';
 import './style/App.css';
 
-import Home from './Home';
+import Home from './Pages/Home/Home';
 import SideNavbar from './SideNavbar';  
 import GameDesign from './GameDesign';
 import OtherProjects from './OtherProjects';
@@ -38,7 +38,7 @@ class AppRouter extends React.Component {
       <Router>
         <div className="App">
           <Row>
-            <Col xs={2} >
+            <Col id="SideNavbar-wrapper" xs={2} >
               <SideNavbar />
             </Col>
             <div id="container" ref={this.container} >

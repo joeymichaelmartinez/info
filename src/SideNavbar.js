@@ -5,7 +5,7 @@ import  { Link } from 'react-scroll';
 
 const SideNavbar = props => {
   return (
-    <div id="sidebar-wrapper">
+    <div>
       <Link activeClass="active" to="section-1" spy={true} smooth={true} duration={250} containerId="container" className="SideNavbar-Link">
         About Me    
       </Link>

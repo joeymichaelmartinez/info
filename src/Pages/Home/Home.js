@@ -1,9 +1,9 @@
 import React from 'react';
-import './style/Home.css';
+import '../../style/Home.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import OtherProjects from './OtherProjects';
-import About from './Pages/Page-1/About';
+import OtherProjects from '../../OtherProjects';
+import About from './Sections/About';
 
 const getConfigurableProps = () => ({
   showArrows: true,
