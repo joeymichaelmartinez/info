@@ -31,20 +31,20 @@ const getConfigurableProps = () => ({
 
 function About() {
   return (
-    <Carousel className="carousel" {...getConfigurableProps()}>
+    // <Carousel className="carousel" {...getConfigurableProps()}>
         <div key="1" id="About">
           <Bio/>
         </div>
-        <div key="2" id="page-2">
-        <Document file={PDF}>
-      <Page pageNumber={1} />
-        </Document>
-          <OtherProjects/>
-        </div>
-        <div key="3" id="page-3">
-          <OtherProjects/>
-        </div>
-      </Carousel> 
+      //   {/* <div key="2" id="page-2">
+      //   <Document file={PDF}>
+      // <Page pageNumber={1} />
+      //   </Document>
+      //     <OtherProjects/>
+      //   </div>
+      //   <div key="3" id="page-3">
+      //     <OtherProjects/>
+      //   </div>
+      // </Carousel>  */}
   )
 }
 
