@@ -1,4 +1,12 @@
 #GameDesign-Container {
+    height: 100%;
+    width: 100%;
     /* display: ; */
-    background-image: url("../assets/images/MegaMan2Boss.png");
+    /* background-image: url("../assets/images/MegaMan2Boss.png"); */
+}
+
+#GameDesign-Container > img {
+    margin-top: 20px;
+    height: 90%;
+    width: 75%;
 }

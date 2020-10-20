@@ -1,16 +1,33 @@
-.SideNavbar-Link {
-  display: block; 
-  margin: 15px;
-  color: #D6E7FF;
+#side-navbar {
+  background-color: #303054;
+  width: 100%;
 }
 
-.SideNavbar-Link:hover {
-  color: #FFFFFF;
-  text-decoration: none;
-  cursor: pointer;
+.side-navbar-link {
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #D6E7FF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .active {
   color: #28B8FF !important;
 }
 
+.side-navbar-link:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.side-navbar-text {
+  padding-left: 10px;
+}
+
+.side-navbar-icon {
+  color: white;
+  font-size: 30px;
+}

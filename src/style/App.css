@@ -3,14 +3,13 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  overflow: auto;
+  overflow-y: auto;
   top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  /* TODO: FIX THIS MARGIN HACK */
-  margin-left:16.678%;
-  max-width: 83.333334%;
+  /* float: left; */
 }
 
 .page {
@@ -20,8 +19,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  /* padding: 20px; */
-  /* box-sizing: border-box; */
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
 }
@@ -41,10 +38,24 @@
   min-height: 100%;
 }
 
+.section-4{
+  height: 100%;
+  min-height: 100%;
+}
+
 .row {
   margin: 0;
 }
 
 #SideNavbar-wrapper {
-  padding-top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0;
 }

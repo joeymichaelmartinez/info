@@ -1,10 +1,12 @@
 import React from 'react';
 import './style/GameDesign.css';
 
+import MegaManBossScreen from "./assets/images/MegaManBossSelect.jpg";
+
 function GameDesign() {
     return (
         <div id="GameDesign-Container">
-            <h1>Work in Progress</h1>
+            <img src={MegaManBossScreen} />
         </div>
     )
 }
