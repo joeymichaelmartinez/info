@@ -3,41 +3,43 @@
   border: 1px solid black;
 }
 
-.carousel {
-  width: 100%;
-  height: 100%;
-}
-
 #About {
   height: 100%;
   width: 100%;
-  background-color: #EBF3FF;
-  display: flex;
+  background: rgb(40,184,255);
+  background: linear-gradient(0deg, rgba(40,184,255,1) 0%, rgba(98,202,255,1) 9%, rgba(168,225,255,1) 17%, rgba(214,231,255,1) 100%);
+  display: grid;
   justify-content: center;
   align-items: center;
+}
+
+#Headshot {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#About-Row {
+  justify-content: center;
+  align-items: center;
+}
+
+#Headshot > img {
+  width: 100%;
+  height: 100%;
 }
 
 #Bio-Text {
   display: grid;
   justify-content: center;
   align-content: center;
-  padding-right: 70px;
+  padding-right: 0;
 }
 
-/* WE ARE USING HIDDEN CLASSES WITHIN CAROUSEL WE SHOULD FIND A BETTER WAY */
-.slider-wrapper {
-  height: 100%;
-  justify-content: center;
-  display: flex;
-}
-
-.slider { 
-  height: 100%;
-}
-
-.slide {
-  background-color: #EBF3FF !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#About > img {
+  /* width: 50%; */
+  /* height: 100%; */
+  border-radius: 15px;
 }

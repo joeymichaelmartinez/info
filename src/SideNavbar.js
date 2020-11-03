@@ -1,8 +1,8 @@
 import React from "react";
-import './style/SideNavbar.css'
+import './style/SideNavbar.css';
 import  { Link } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressCard, faCode, faGamepad, faHome } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard, faCode, faGamepad, faHome } from '@fortawesome/free-solid-svg-icons';
 
 const SideNavbar = props => {
   return (
