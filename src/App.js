@@ -26,7 +26,7 @@ class AppRouter extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      isDesktop: window.innerWidth > 768
+      isDesktop: window.innerWidth > 1024
     };
 
     this.updatePredicate = this.updatePredicate.bind(this);
@@ -44,7 +44,7 @@ class AppRouter extends React.Component {
   }
 
   updatePredicate() {
-    this.setState({ isDesktop: window.innerWidth > 768 });
+    this.setState({ isDesktop: window.innerWidth > 1024 });
   }
 
   container = React.createRef()
@@ -64,8 +64,8 @@ class AppRouter extends React.Component {
               <SideBar />
               {/* <SideNavbar /> */}
             </Col>
-            {this.state.isDesktop ? (
-            <Col xs={10} id="container" ref={this.container}>
+            {/* {this.state.isDesktop ? ( */}
+            <Col xs={this.state.isDesktop ? 10 : 12} id="container" ref={this.container}>
               <section name="section-1" id="section-1" className="section-1 page">
                 <Header />  
               </section>
@@ -79,7 +79,7 @@ class AppRouter extends React.Component {
                 <GameDesign />  
               </section>
             </Col>
-            ) : ( 
+            {/* ) : ( 
               <Col xs={12} id="container" ref={this.container}>
               <section name="section-1" id="section-1" className="section-1 page">
                 <Header />  
@@ -95,7 +95,7 @@ class AppRouter extends React.Component {
               </section>
               </Col>
             )
-            }
+            } */}
           </Row>
         </div>
       </Router>

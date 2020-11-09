@@ -5,10 +5,10 @@ import Hamburger from './Hamburger';
 
 function SideBar() {
   const [open, setOpen] = useState(false);
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 768);
+    setDesktop(window.innerWidth > 1024);
   };
 
   useEffect(() => {

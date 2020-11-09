@@ -19,13 +19,15 @@ const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  padding-right: 10px;
+  padding-left: 10px;
 
   @media (max-width: 576px) {
       // width: 100%;
-    }
+  }
 
   a {
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 5px 0;
     font-weight: bold;
