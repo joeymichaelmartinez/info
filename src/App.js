@@ -98,7 +98,7 @@ const gameDesignInfo = {
     description: `A VR music visualizer built in Unity`,
     fullDescription: `My second semester Senior year project at LMU. This project was meant to both demonstrate 
                       the power Unity has in turning music into a visual experience, but also to showcase how 
-                      engaging those visuals can be wgeb experienced through Virtual Reality`,
+                      engaging those visuals can be through Virtual Reality`,
     image: MusicVisualizer,
     link: "https://github.com/joeymichaelmartinez/Chromophony"
   },
