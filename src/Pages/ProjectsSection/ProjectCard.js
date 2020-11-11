@@ -15,7 +15,7 @@ function ProjectCard(props) {
         <div id="Card-Image">
           <img src={props.image} alt="Project"/>
         </div>
-        <div>
+        <div id="Card-Text">
           <h3 id="Card-Title"> {props.title} </h3>  
           {props.isDesktop &&
           <p id="Card-Description">

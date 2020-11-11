@@ -27,7 +27,7 @@ import KawaiiKick from './assets/images/KawaiiKickMenu.png';
 const projectInfo = {
   project1: {
     title: `Web Front-end API`,
-    description: `A front-end design used to demonstrate integration with a pre-existing API`,
+    description: `A front-end design integrated with a pre-existing API`,
     fullDescription: `Constructed front-end web apps that used a pre-existing web 
                       service API to learn best practices for UI design`,
     image: Pokeball,
@@ -35,7 +35,7 @@ const projectInfo = {
   },
   project2: {
     title: `AudiophyleDB`,
-    description: `A MySQL database used to store audio files`,
+    description: `A MySQL database used to store audio files and related info`,
     fullDescription: `A database project meant to demonstrate how to store audio files and related 
                       information in a normalized MySQL database with CRUD functionality. Set up a 
                       simple front-end to handle accessing and manipulating this information`,
@@ -44,7 +44,7 @@ const projectInfo = {
   },
   project3: {
     title: `Usability Study`,
-    description: `A study that weighs how well mobile apps handle user experience and interface design`,
+    description: `A study that scores mobile apps on user experience metrics`,
     fullDescription: `A study meant to gather statistics that would inform the overall effectiveness of 
                       various mobile apps based on certain usability metrics`,
     image: UsabilityStudy,
@@ -62,7 +62,7 @@ const projectInfo = {
   },
   project5: {
     title: `Autocomplete`,
-    description: `A demonstration of how autocomplete is implemented using ternary trees`,
+    description: `An implementation of autocomplete using ternary trees`,
     fullDescription: `While learning Java and Data Structures, I put together a project that would demonstrate how 
                       ternary trees are the perfect candidate to implement the common tasks necessary to perform autocomplete`,
     image: Search,
@@ -70,7 +70,7 @@ const projectInfo = {
   },
   project6: {
     title: `J4 Lang`,
-    description: `A scripting language meant to emphasize readability and understandability`,
+    description: `A scripting language that emphasizes readability`,
     fullDescription: `J4 is a scripting language built for LMU's compilers course. It is meant to simplify basic coding constructs 
                       so that they are more readable and more easily understood. It is a statically and strongly typed language based
                       on Python and Javascript`,
@@ -123,7 +123,7 @@ const gameDesignInfo = {
   },
   project5: {
     title: `Homeless Simulator Game`,
-    description: `A simulation game where the player takes the role of a homeless person `,
+    description: `A simulation game based on life as a homeless person`,
     fullDescription: `Homeless Survivor is a game that lets the player take the role of a homeless person as they attempt to find places to sleep 
                       at night and find food during the day. Homeless survivor is meant to show the difficulty of life without a stable home and 
                       draw sympathy for those who are in such a situation`,
@@ -148,8 +148,8 @@ const gameDesignStyle = {
 const snapConfig = {
   snapDestinationX: '0%',
   snapDestinationY: '100%',
-  timeout: 10,
-  duration: 100,
+  timeout: 50,
+  duration: 200,
   threshold: 0.4,
 } 
 
@@ -166,7 +166,9 @@ class AppRouter extends React.Component {
 
   componentDidMount() {
     scrollSpy.update();
-    this.bindScrollSnap();
+    if(this.state.isDesktop) {
+      this.bindScrollSnap();
+    }
     this.updatePredicate();
     window.addEventListener("resize", this.updatePredicate);
   }

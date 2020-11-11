@@ -28,16 +28,16 @@ function Bio() {
         </Col>
         <Col xs={isDesktop ? 7 : 12} id="Bio-Text">
           <p>
-            Hello, I'm Joey! I am a graduate of Loyola Marymount with a B.S. in computer science. 
+            Hello, I'm Joey! I am a graduate of Loyola Marymount University with a B.S. in Computer Science. 
             I work as a contractor for Vero as a full stack developer. My work involves blockchain development,
-            creating apps in react, and maintaining web APIs.
+            apps creation in react, and web APIs maintenance.
           </p>
           <p>
             I love furthering my understanding of full stack development and growing as a software engineer.
           </p>
           <p>
-            In my free time I like to program small video games and continue learning programming through game design. 
-            I also enjoy music, and play drums, and I am currently learning guitar and piano.
+            In my free time I like to program video games and learn programming through game design. 
+            I also enjoy music, playing drums, and am currently learning guitar and piano.
           </p>
           <div id="Personal-Links">
             <Button id="Resume-Button" size="md" href={Resume}> Resume </Button> 
