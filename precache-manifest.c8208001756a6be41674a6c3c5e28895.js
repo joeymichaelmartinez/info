@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea9d6944e49eaed78d015e0a2b5d088c",
+    "revision": "c86f03d40ac34d5a6577dee1d5f06c7d",
     "url": "/info/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/info/static/css/2.8aa5a7f8.chunk.css"
   },
   {
-    "revision": "9edd288e0ae989c3a96e",
-    "url": "/info/static/css/main.139e50c8.chunk.css"
+    "revision": "e713ff7e44010b165f75",
+    "url": "/info/static/css/main.88a8bcf7.chunk.css"
   },
   {
     "revision": "504c167b7745ada546af",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/info/static/js/2.ff4a500d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9edd288e0ae989c3a96e",
-    "url": "/info/static/js/main.6ba6026e.chunk.js"
+    "revision": "e713ff7e44010b165f75",
+    "url": "/info/static/js/main.7d03e8bc.chunk.js"
   },
   {
     "revision": "9628ee48ccc5fef29d80",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/info/static/media/Pokeball.6058de96.svg"
   },
   {
-    "revision": "07ebef65fe6115e99d5e434bf8c8fd75",
-    "url": "/info/static/media/Usability-Test.07ebef65.svg"
+    "revision": "4ad31d9289f869f7f4ed6668c62ec001",
+    "url": "/info/static/media/Usability-Test.4ad31d92.svg"
   },
   {
     "revision": "a0769375b620a97bf326de1db89fc3f5",
@@ -72,7 +72,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/info/static/media/joey4Flipped.69c633b1.jpg"
   },
   {
-    "revision": "ec989ea232b23d1184668e639509e03b",
-    "url": "/info/static/media/search.ec989ea2.svg"
+    "revision": "9a43fe71e3382674bfcec127fae811ca",
+    "url": "/info/static/media/search.9a43fe71.svg"
   }
 ]);
