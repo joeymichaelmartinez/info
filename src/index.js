@@ -6,7 +6,6 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 let app = <App/>
-// let app = <h1>Under Construction</h1>
 
 ReactDOM.render(app, document.getElementById('root'));
 

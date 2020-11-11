@@ -22,7 +22,6 @@ function Bio() {
 
   return (
     <div id="About">
-      <div id="Above-Banner" />
       <Row id="About-Row">
         <Col xs={5} id="Headshot">
           <img src={Headshot} alt="Headshot"/>
@@ -56,7 +55,6 @@ function Bio() {
           </div>
           </Col>
       </Row>
-      <div id="Below-Banner" />
     </div>
   )
 }

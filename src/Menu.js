@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import  { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faCode, faGamepad, faHome } from '@fortawesome/free-solid-svg-icons';
-import './style/Menu.css';
 
 const StyledMenu = styled.nav`
   z-index: 100;
@@ -14,7 +13,6 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   text-align: left;
-  // padding: 2rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,34 +20,23 @@ const StyledMenu = styled.nav`
   padding-right: 10px;
   padding-left: 10px;
 
-  @media (max-width: 576px) {
-      // width: 100%;
-  }
-
   a {
     font-size: 16px;
     text-transform: uppercase;
     padding: 5px 0;
     font-weight: bold;
     letter-spacing: 5px;
-    // color: #0D0C1D;
     text-decoration: none;
     transition: color 0.3s linear;
-
-    // @media (max-width: 576px) {
-    //   font-size: 1.5rem;
-    //   text-align: center;
-    // }
-
-    &:hover {
-      // color: #343078;
-    }
   }
 `
   
 const Menu = ({ open, setOpen }) => {
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, () => setOpen(!open));
+
   return (
-    <StyledMenu open={open} id="side-navbar">
+    <StyledMenu open={open} id="side-navbar" ref={wrapperRef}>
       <Link activeClass="active" to="section-1" spy={true} smooth={true} duration={250} containerId="container" className="side-navbar-link" onClick={() => setOpen(!open)}>
         <FontAwesomeIcon icon={faHome} className="side-navbar-icon"/>
         <div className="side-navbar-text">
@@ -76,6 +63,26 @@ const Menu = ({ open, setOpen }) => {
       </Link>
     </StyledMenu>
   )
+}
+
+function useOutsideAlerter(ref, callback) {
+  useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+          if (ref.current && !ref.current.contains(event.target)) {
+              // callback();
+          }
+      }
+
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+          // Unbind the event listener on clean up
+          document.removeEventListener("mousedown", handleClickOutside);
+      };
+  }, [ref]);
 }
 
 export default Menu;

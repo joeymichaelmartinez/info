@@ -4,12 +4,10 @@
 }
 
 #Projects {
-  background: rgb(0,124,198);
-  background: linear-gradient(0deg, rgba(0,124,198,1) 0%, rgba(22,157,229,1) 10%, rgba(40,184,255,1) 20%, rgba(40,184,255,1) 100%);
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 300px 300px;
-  column-gap: 2%;
+  column-gap: 4%;
   row-gap: 5%;
   height:100%;
   width: 100%;
@@ -17,12 +15,32 @@
   max-width:100%;
   justify-content: center;
   align-content: center;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
 }
 
-#Projects > * {
+.Lighter-Blue {
+  background: linear-gradient(0deg, rgba(0,124,198,1) 0%, rgba(22,157,229,1) 10%, rgba(40,184,255,1) 20%, rgba(40,184,255,1) 100%);
+}
+
+.Lighter-Blue > * {
   background-color: #007CC6;
+}
+
+.Darker-Blue {
+  background-color: #007CC6;
+}
+
+.Darker-Blue > * {
+  background-color: rgba(40,184,255,1);
+}
+
+.Darker-Blue > * > * {
+  color: black;
+}
+
+#Projects > * {
+  border: 2px solid black;
   color: white;
   height: 100%;
   width: 100%;
@@ -36,6 +54,11 @@
   transform: scale(1.1); 
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Modal-Link {
+  margin-right: auto;
+  margin-left: 30px;
 }
 
 @media screen and (max-width: 667px) {

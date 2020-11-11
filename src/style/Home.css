@@ -6,14 +6,11 @@
     background-size: cover;
     align-items: center;
     display: flex;
-    /* padding-left: 100px; */
 }
 
 #Header-Text {
     display: block;
-    /* margin-right: 100px; */
     margin-left: 100px;
-    /* padding-right: 200px; */
 }
 
 @media screen and (max-width: 1024px) {

@@ -1,4 +1,4 @@
-import React, { ReactDOM } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledBurger = styled.button`
@@ -46,30 +46,12 @@ const StyledBurger = styled.button`
 
 const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger open={open} onClick={() => setOpen(!open)} >
       <div />
       <div />
       <div />
     </StyledBurger>
   )
 }
-
-const useOnClickOutside = (ref, handler) => {
-  React.useEffect(() => {
-    const listener = event => {
-      if (!ref.current || ref.current.contains(event.target)) {
-        return;
-      }
-      handler(event);
-    };
-    document.addEventListener('mousedown', listener);
-
-    return () => {
-      document.removeEventListener('mousedown', listener);
-    };
-  },
-  [ref, handler],
-  );
-};
 
 export default Burger;

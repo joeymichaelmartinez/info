@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import "../../style/ProjectCard.css";
-import StockPhoto from '../../assets/images/lookingAtComputerStock.jpg'
 
 function ProjectCard(props) {
   const [show, setShow] = useState(false);
@@ -14,7 +13,7 @@ function ProjectCard(props) {
     <>
       <div id="card" variant="primary" onClick={handleShow}>
         <div id="Card-Image">
-          <img src={props.image} />
+          <img src={props.image} alt="Project"/>
         </div>
         <div>
           <h3 id="Card-Title"> {props.title} </h3>  
@@ -31,10 +30,13 @@ function ProjectCard(props) {
           <Modal.Title>{props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body id="Modal-Body">
-          <img src={props.image} id="Modal-Image"/>
+          <img src={props.image} id="Modal-Image" alt="Modal"/>
           {props.fullDescription}
         </Modal.Body>
         <Modal.Footer>
+          <div id="Modal-Link">
+            <a href={props.link}>Link to GitHub</a>
+          </div>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
