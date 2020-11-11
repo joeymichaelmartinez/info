@@ -150,7 +150,7 @@ const snapConfig = {
   snapDestinationY: '100%',
   timeout: 10,
   duration: 100,
-  threshold: 0.1,
+  threshold: 0.4,
 } 
 
 class AppRouter extends React.Component {
