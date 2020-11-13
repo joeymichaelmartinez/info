@@ -71,12 +71,14 @@
 
 @media screen and (max-height: 580px) {
   #Card-Image {
+    height: 30%;
     max-height: 30%; 
   }
 }
 
 @media screen and (max-width: 580px) and (orientation: landscape){
   #Card-Image {
+    height: 30%;
     max-height: 30%; 
   }
 } 
