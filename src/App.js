@@ -147,10 +147,10 @@ const gameDesignStyle = {
 
 const snapConfig = {
   snapDestinationX: '0%',
-  snapDestinationY: '100%',
+  snapDestinationY: '101%',
   timeout: 50,
   duration: 200,
-  threshold: 0.4,
+  threshold: 0.2,
 } 
 
 class AppRouter extends React.Component {
