@@ -79,7 +79,7 @@
   #Card-Image {
     max-height: 30%; 
   }
-}
+} 
 
 @media screen and (max-width: 480px) {
   #card {
