@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/info/static/css/main.5cc60c2a.css",
+    "main.js": "/info/static/js/main.5da5906d.js",
+    "static/media/joey4Flipped.jpg": "/info/static/media/joey4Flipped.9ebd7d222f0ce554e979.jpg",
+    "static/media/Headshot.jpg": "/info/static/media/Headshot.d6b94d6515ac9c5661df.jpg",
+    "static/media/KawaiiKickMenu.png": "/info/static/media/KawaiiKickMenu.123d7193ae52216ee3e9.png",
+    "static/media/JosephMartinezResume.pdf": "/info/static/media/JosephMartinezResume.7ea0519695c94e28060e.pdf",
+    "static/media/MusicVisualizer.png": "/info/static/media/MusicVisualizer.208d0d00c90cd6f6c6c6.png",
+    "static/media/DatabaseIcon.png": "/info/static/media/DatabaseIcon.9250815c5e33693ba9f6.png",
+    "static/media/InterrobangLogo.png": "/info/static/media/InterrobangLogo.01ec0b142e89213be976.png",
+    "static/media/CardGame.png": "/info/static/media/CardGame.2557282133d36a6e4292.png",
+    "static/media/beggar.png": "/info/static/media/beggar.5f5511256cf977702d98.png",
+    "static/media/Pokeball.svg": "/info/static/media/Pokeball.76612ad7999f6ecca6823c35384486be.svg",
+    "static/media/Usability-Test.svg": "/info/static/media/Usability-Test.4e579ff6e1a8dcb019a47f9bf7438f01.svg",
+    "static/media/search.svg": "/info/static/media/search.1b6a27dba66d131e8f789a3be94210b7.svg",
+    "index.html": "/info/index.html",
+    "main.5cc60c2a.css.map": "/info/static/css/main.5cc60c2a.css.map",
+    "main.5da5906d.js.map": "/info/static/js/main.5da5906d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cc60c2a.css",
+    "static/js/main.5da5906d.js"
+  ]
+}
