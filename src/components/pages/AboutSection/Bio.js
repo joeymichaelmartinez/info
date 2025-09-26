@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import Headshot from '../../assets/images/Headshot.jpg';
-import "../../style/Bio.css";
+import Headshot from '../../../assets/images/Headshot.jpg';
+import "./Bio.css";
 import { Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import Resume from '../../assets/JosephMartinezResume.pdf';
+import Resume from '../../../assets/resume/JosephMartinezResume.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';

@@ -1,5 +1,4 @@
-import React from 'react';
-import "../style/Home.css";
+import "./Home.css";
 
 function Header() {
   return (

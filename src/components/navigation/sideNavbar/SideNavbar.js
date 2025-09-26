@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
-import './style/SideNavbar.css';
-import Menu from './Menu';
-import Hamburger from './Hamburger';
+import './SideNavbar.css';
+import Menu from '../menu/Menu';
+import Hamburger from '../mobileHamburger/Hamburger';
 
 function SideNavbar() {
   const [open, setOpen] = useState(false);

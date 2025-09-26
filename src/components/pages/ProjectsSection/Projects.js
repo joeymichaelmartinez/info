@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import ProjectCards from './ProjectCard';
-import '../../style/Projects.css';
+import ProjectCards from './projectCard/ProjectCard';
+import './Projects.css';
 
 function Projects(props) {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
@@ -18,14 +18,14 @@ function Projects(props) {
   return (
     <div id="Projects-Container">
       <div id="Projects" className={props.projectStyle.backgroundColor}>
-      {Object.keys(props.projectInfo).map((keyName, i) => (
+      {props.projectInfo.map((project) => (
         <ProjectCards
           isDesktop={isDesktop}
-          title={props.projectInfo[keyName].title} 
-          fullDescription={props.projectInfo[keyName].fullDescription} 
-          description={props.projectInfo[keyName].description} 
-          image={props.projectInfo[keyName].image}
-          link={props.projectInfo[keyName].link}
+          title={project.title} 
+          fullDescription={project.fullDescription} 
+          description={project.description} 
+          image={project.image}
+          link={project.link}
         />
       ))}
       </div>
