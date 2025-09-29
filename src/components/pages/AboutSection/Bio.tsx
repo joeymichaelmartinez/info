@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, FC} from 'react';
 import Headshot from '../../../assets/images/Headshot.jpg';
 import "./Bio.css";
 import { Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import Resume from '../../../assets/resume/JosephMartinezResume.pdf';
+import resumePdf from "../../../assets/resume/JosephMartinezResume.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function Bio() {
+const Bio: FC = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
 
   const updateMedia = () => {
@@ -40,7 +40,15 @@ function Bio() {
             I also enjoy music, playing drums, and am currently learning guitar and piano.
           </p>
           <div id="Personal-Links">
-            <Button id="Resume-Button" size="md" href={Resume}> Resume </Button> 
+            <Button
+              id="Resume-Button"
+              size="lg"
+              href={resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </Button>
             <div id="Social-Links">
               <a href="https://github.com/joeymichaelmartinez">
                 <FontAwesomeIcon icon={faGithub} className="Social-Icon"/>
@@ -56,7 +64,7 @@ function Bio() {
           </Col>
       </Row>
     </div>
-  )
+  );
 }
 
 export default Bio;
