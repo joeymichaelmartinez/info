@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/info/static/css/main.5cc60c2a.css",
-    "main.js": "/info/static/js/main.5da5906d.js",
+    "main.js": "/info/static/js/main.9bce56a3.js",
     "static/media/joey4Flipped.jpg": "/info/static/media/joey4Flipped.9ebd7d222f0ce554e979.jpg",
     "static/media/Headshot.jpg": "/info/static/media/Headshot.d6b94d6515ac9c5661df.jpg",
     "static/media/KawaiiKickMenu.png": "/info/static/media/KawaiiKickMenu.123d7193ae52216ee3e9.png",
@@ -16,10 +16,10 @@
     "static/media/search.svg": "/info/static/media/search.1b6a27dba66d131e8f789a3be94210b7.svg",
     "index.html": "/info/index.html",
     "main.5cc60c2a.css.map": "/info/static/css/main.5cc60c2a.css.map",
-    "main.5da5906d.js.map": "/info/static/js/main.5da5906d.js.map"
+    "main.9bce56a3.js.map": "/info/static/js/main.9bce56a3.js.map"
   },
   "entrypoints": [
     "static/css/main.5cc60c2a.css",
-    "static/js/main.5da5906d.js"
+    "static/js/main.9bce56a3.js"
   ]
 }
