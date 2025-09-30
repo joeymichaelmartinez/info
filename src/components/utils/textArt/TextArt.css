@@ -1,0 +1,6 @@
+.text-art {
+  font-family: monospace, "Courier New", Courier;
+  white-space: pre;
+  overflow-x: auto; 
+  line-height: 1;
+}
