@@ -7,20 +7,20 @@ interface TextArtProps {
   onComplete?: () => void;
 }
 
-const TextArt = ({ label, text, speed = 1, onComplete }: TextArtProps) => {
+const TextArt = ({ label, text, speed, onComplete }: TextArtProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    setCurrentIndex(0); // reset if text changes
+    setCurrentIndex(0);
   }, [text]);
 
   useEffect(() => {
     if (currentIndex >= text.length) {
-      onComplete?.(); // call callback when finished
+      onComplete?.();
       return;
     }
 
-    const timer = setTimeout(() => setCurrentIndex((prev) => prev + 1), speed);
+    const timer = setTimeout(() => setCurrentIndex((prev) => prev + 10), speed);
     return () => clearTimeout(timer);
   }, [currentIndex, text, speed, onComplete]);
 
