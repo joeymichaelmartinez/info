@@ -3,21 +3,19 @@ import { useEffect, useState } from "react";
 interface TypingTextProps {
   text: string;
   speed?: number;
-  onComplete?: () => void; // ✅ add optional callback
+  onComplete?: () => void;
 }
 
 const TypingText = ({ text, speed = 20, onComplete }: TypingTextProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // reset index if text changes
   useEffect(() => {
     setCurrentIndex(0);
   }, [text]);
 
-  // type characters one by one
   useEffect(() => {
     if (currentIndex >= text.length) {
-      onComplete?.(); // ✅ call callback when finished
+      onComplete?.();
       return;
     }
 

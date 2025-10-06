@@ -19,7 +19,7 @@ export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtPro
   return (
     <div className="homeScreenAsciiArt">
       {scrollingBootText ?
-        <TextArt onComplete={onComplete} label="Ascii Art" text={scrollingBootText} speed={1} /> : 
+        <TextArt onComplete={onComplete} label="Ascii Art" text={scrollingBootText} speed={5} /> : 
         <></>
       }
     </div>
