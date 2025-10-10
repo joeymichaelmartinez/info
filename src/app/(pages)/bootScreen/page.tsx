@@ -45,7 +45,7 @@ export default function BootScreen() {
   }, [done, router]);
 
   return (
-    <pre className="text-art">
+    <div className={styles.bootText}>
       {step === 0 && <div className={styles.blink}>Booting...</div>}
       {step >= 1 &&
         displayedLines.map((line, idx) => (
@@ -54,7 +54,7 @@ export default function BootScreen() {
           </div>
         ))}
       {done && <div className={styles.blink}>Press Enter to continue...</div>}
-    </pre>
+    </div>
   );
 }
 

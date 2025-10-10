@@ -1,5 +1,6 @@
 import TextArt from "@/app/utils/textArt/TextArt";
 import { useEffect, useState } from "react";
+import style from './HomeScreenAsciiArt.module.css';
 
 interface HomeScreenAsciiArtProps {
   onComplete: () => void
@@ -17,7 +18,7 @@ export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtPro
   }, []);
 
   return (
-    <div className="homeScreenAsciiArt">
+    <div className={style.homeScreenAsciiArt}>
       {scrollingBootText ?
         <TextArt onComplete={onComplete} label="Ascii Art" text={scrollingBootText} speed={5} /> : 
         <></>

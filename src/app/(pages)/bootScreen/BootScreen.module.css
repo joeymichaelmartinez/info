@@ -1,3 +1,7 @@
+.bootText {
+  font-size: 28px;
+}
+
 .blink {
   animation: blink 1s step-start infinite;
 }

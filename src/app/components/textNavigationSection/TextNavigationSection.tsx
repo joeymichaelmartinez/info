@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import TypingText from "../../utils/typingText/TypingText";
 import { useRouter } from "next/navigation";
+import style from './TextNavigationSection.module.css';
 
 interface TextNavigationSectionProps {
   startTyping?: boolean;
@@ -75,7 +76,7 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
   const itemsToRender = allItems.slice(0, currentTypingIndex);
 
   return (
-    <div className="textNavigationSection">
+    <div className={style.textNavigationSection}>
       {itemsToRender.map((item, index) => (
         <p key={index}>
           <a onClick={()=>router.push(index.toString())}>
