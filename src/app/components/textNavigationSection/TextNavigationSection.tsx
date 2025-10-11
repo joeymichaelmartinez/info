@@ -18,7 +18,6 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
 
   const router = useRouter();
 
-  // include welcome as the first item
   const allItems = ["Welcome to Joey's Portfolio!", ...navigationItems];
 
   const [currentSelected, setCurrentSelected] = useState(0);
@@ -28,7 +27,6 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     setCurrentTypingIndex((prev) => prev + 1);
   };
 
-  // Start typing first item when startTyping becomes true
   useEffect(() => {
     if (startTyping && currentTypingIndex === 0) {
       handleNextItem();
@@ -59,7 +57,6 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [currentSelected]);
 
-  // arrow key navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowUp") {

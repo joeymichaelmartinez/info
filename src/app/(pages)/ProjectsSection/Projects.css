@@ -20,6 +20,15 @@
   padding-right: 20px;
 }
 
+.project-selector {
+  width: 25%;
+  margin: auto;
+}
+
+.project-card-section {
+  display: flex;
+}
+
 .Lighter-Blue {
   background: linear-gradient(0deg, rgba(0,124,198,1) 0%, rgba(22,157,229,1) 10%, rgba(40,184,255,1) 20%, rgba(40,184,255,1) 100%);
 }
