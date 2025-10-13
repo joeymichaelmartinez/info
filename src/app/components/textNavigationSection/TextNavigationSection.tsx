@@ -95,9 +95,12 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
 
     <div className={style.selectableContainer}>
       {itemsToRender.slice(1).map((item, index) => (
-        <p className={style.selectableItem} key={index}>
+        <p 
+          className={`${deviceType==='desktop' && style.selectableItem} ${index === currentSelected ? style.selectedItem : ""}`} 
+          key={index}
+        >
           <a onClick={()=> handleClickNavigation(index)}>
-            {index === currentSelected ? "[>]" : "[ ]"}{" "}
+            {deviceType==='desktop' && index === currentSelected ? "[>]" : deviceType==='desktop' ? "[ ]" : ""}{" "}
             <TypingText
               text={item}
               speed={10}

@@ -6,6 +6,7 @@ import "./Projects.css";
 import { projectInfo } from "@/data/projectInfo";
 import rightArrowInverted from "../../../../public/images/right-arrow-inverted.png";
 import useDeviceType from "@/app/utils/deviceType/useDeviceType";
+import InputHints from "@/app/components/inputHints/InputHints";
 
 function Projects() {
   const [isDesktop, setDesktop] = useState(
@@ -87,6 +88,9 @@ function Projects() {
   }, []);
 
   return (
+    <div>
+
+    
     <div className="projects-container">
       <div className="Projects">
         {projectInfo.map((project, index) => (
@@ -114,6 +118,11 @@ function Projects() {
         ))}
       </div>
     </div>
+      <InputHints hintText={deviceType === 'desktop' ?
+        `Use ↑ ↓ → ← to navigate, Enter to select, or click a card to reveal project info!` :
+        `Tap each card to reveal project info!`
+      }/>
+      </div>
   );
 }
 

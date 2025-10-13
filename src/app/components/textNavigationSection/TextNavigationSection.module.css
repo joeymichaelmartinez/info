@@ -25,3 +25,12 @@
   width: 100%;
   cursor: pointer;
 }
+
+.selectableItem:hover {
+  color: oklch(50% 0.3 260); /* brighter on hover */
+}
+
+.selectableItem.selectedItem:not(:hover) {
+  color: oklch(35.6% 0.21216 264.118); /* selected but not hovered */
+}
+
