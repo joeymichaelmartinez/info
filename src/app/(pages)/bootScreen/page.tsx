@@ -37,7 +37,7 @@ export default function BootScreen() {
     if (!done) return;
 
     const handleKeyDown = () => {
-        router.push("/homeScreen");
+        router.push("/HomeScreen");
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -45,7 +45,7 @@ export default function BootScreen() {
   }, [done, router]);
 
   return (
-    <div onClick={() => router.push("/homeScreen")} className={styles.bootText}>
+    <div onClick={() => router.push("/HomeScreen")} className={styles.bootText}>
       <div className={styles.initialBootText}>
         {step === 0 && <div className={styles.blink}>Booting...</div>}
         {!done && step >= 1 &&

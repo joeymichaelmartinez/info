@@ -1,4 +1,4 @@
-import BootScreen from './(pages)/bootScreen/page';
+import BootScreen from './(pages)/BootScreen/page';
 
 export default function Home() {
   return (
