@@ -6,10 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import style from "./Bio.module.css";
+import useDeviceType from '@/app/utils/deviceType/useDeviceType';
 
 const Bio: FC = () => {
+  const deviceType = useDeviceType();
+
   return (
-    <div className={`min-h-screen grid grid-cols-2 gap-8 items-center justify-center ${style.about}`}>
+    <div className={`min-h-screen grid gap-8 items-center justify-center ${style.about} ${deviceType === 'mobile' ? 'grid-cols-1' : 'grid-cols-2'}`}>
+
       <div className={`${style.headshot} flex justify-center`}>
         <img
           src={Headshot.src}
@@ -36,12 +40,13 @@ const Bio: FC = () => {
         </p>
 
         
-          <div className="flex gap-6 text-2xl items-center">
-              <a href="/resume/JosephMartinezResume.pdf" target="_blank" rel="noopener noreferrer">
-                <Button className={style.resumeButton} size="lg">
-                    Download Resume
-                </Button>
-              </a>
+          <div className={`${style.flexSocial}`}>
+            <a href="/resume/JosephMartinezResume.pdf" target="_blank" rel="noopener noreferrer">
+              <Button className={style.resumeButton} size="lg">
+                Download Resume
+              </Button>
+            </a>
+
             <div className={style.socialLinks}>
               <a href="https://github.com/joeymichaelmartinez">
                 <FontAwesomeIcon icon={faGithub} />

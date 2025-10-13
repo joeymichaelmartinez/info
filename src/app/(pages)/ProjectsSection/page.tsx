@@ -5,6 +5,7 @@ import ProjectCards from "./projectCard/ProjectCard";
 import "./Projects.css";
 import { projectInfo } from "@/data/projectInfo";
 import rightArrowInverted from "../../../../public/images/right-arrow-inverted.png";
+import useDeviceType from "@/app/utils/deviceType/useDeviceType";
 
 function Projects() {
   const [isDesktop, setDesktop] = useState(
@@ -13,6 +14,8 @@ function Projects() {
 
   const [currentSelected, setCurrentSelected] = useState(0);
   const currentSelectedRef = useRef<number>(currentSelected);
+
+  const deviceType = useDeviceType();
 
   useEffect(() => {
     currentSelectedRef.current = currentSelected;
@@ -66,7 +69,6 @@ function Projects() {
         });
         e.preventDefault();
       } else if (e.key === "Enter") {
-        // read the most recent selection from the ref
         setOpenDialogIndex(currentSelectedRef.current);
         e.preventDefault();
       } else if (e.key === "Escape") {
@@ -76,9 +78,8 @@ function Projects() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [projectInfo.length]); // only re-create listener if project list length changes
+  }, [projectInfo.length]);
 
-  // resize handler (stable)
   useEffect(() => {
     const updateMedia = () => setDesktop(window.innerWidth > 1024);
     window.addEventListener("resize", updateMedia);
@@ -86,12 +87,12 @@ function Projects() {
   }, []);
 
   return (
-    <div className="Projects-Container">
+    <div className="projects-container">
       <div className="Projects">
         {projectInfo.map((project, index) => (
           <div key={index} className="project-card-section">
             <div className="project-selector">
-              {index === currentSelected ? (
+              {deviceType==='desktop' && index === currentSelected ? (
                 <img src={rightArrowInverted.src} style={{ color: "white" }} />
               ) : (
                 <></>
@@ -107,7 +108,6 @@ function Projects() {
               image={project.image}
               link={project.link}
               isDialogOpen={openDialogIndex === index}
-              // when the child asks to open/close, update the parent index
               setIsDialogOpen={(open) => setOpenDialogIndex(open ? index : null)}
             />
           </div>
