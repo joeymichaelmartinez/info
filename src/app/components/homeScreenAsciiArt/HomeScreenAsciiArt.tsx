@@ -1,6 +1,8 @@
 import TextArt from "@/app/utils/textArt/TextArt";
 import { useEffect, useState } from "react";
 import style from './HomeScreenAsciiArt.module.css';
+import useDeviceType from "@/app/utils/deviceType/useDeviceType";
+import asciiArt from "../../../../public/ascii/asciiArt.png"
 
 interface HomeScreenAsciiArtProps {
   onComplete: () => void
@@ -8,6 +10,7 @@ interface HomeScreenAsciiArtProps {
 
 export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtProps) {
   const [scrollingBootText, setScrollingBootText] = useState("");
+  const deviceType = useDeviceType();
   useEffect(() => {
     const getAsciiArt = async () => {
       const asciiArtPromise = await fetch("/ascii/asciiArt.txt");
@@ -17,12 +20,21 @@ export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtPro
     getAsciiArt();
   }, []);
 
+  useEffect(() => {
+    if(deviceType==="mobile") {
+      onComplete?.();
+      return;
+    }
+  }, [deviceType]);
+
   return (
-    <div className={style.homeScreenAsciiArt}>
+    (deviceType === "desktop" ? <div className={style.homeScreenAsciiArt}>
       {scrollingBootText ?
         <TextArt onComplete={onComplete} label="Ascii Art" text={scrollingBootText} speed={5} /> : 
         <></>
       }
-    </div>
+    </div> :
+      <img className={style.mobileAsciiImage} src={asciiArt.src} />
+    )
   );
 }
