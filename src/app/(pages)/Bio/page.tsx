@@ -24,10 +24,10 @@ const Bio: FC = () => {
 
       <div className={`${style.bioText} space-y-4`}>
         <p>
-          Hello, I'm Joey! I am a Full Stack Developer who prides himself on his ability to learn and hunger to grow.
+          Hello, I&apos;sm Joey! I am a Full Stack Developer who prides himself on his ability to learn and hunger to grow.
           I love projects, and seeing progress gives me the momentum to finish strong. I work endlessly to make sure that
           I am not only reaching my goals efficiently, but that my code is both effective, clean, and easy to understand. 
-          As an engineer, I believe it's important to stay mindful and up to day on best practices, and keep refining your own
+          As an engineer, I believe it&apos;ss important to stay mindful and up to day on best practices, and keep refining your own
           process, so that you are always striving to create the best product possible. 
         </p>
         <p>

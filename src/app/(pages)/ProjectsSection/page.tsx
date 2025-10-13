@@ -8,6 +8,7 @@ import rightArrowInverted from "../../../../public/images/right-arrow-inverted.p
 import useDeviceType from "@/app/utils/deviceType/useDeviceType";
 import InputHints from "@/app/components/inputHints/InputHints";
 
+
 function Projects() {
   const [isDesktop, setDesktop] = useState(
     typeof window !== "undefined" && window.innerWidth > 1024
@@ -79,7 +80,7 @@ function Projects() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [projectInfo.length]);
+  }, []);
 
   useEffect(() => {
     const updateMedia = () => setDesktop(window.innerWidth > 1024);
@@ -97,7 +98,7 @@ function Projects() {
           <div key={index} className="project-card-section">
             <div className="project-selector">
               {deviceType==='desktop' && index === currentSelected ? (
-                <img src={rightArrowInverted.src} style={{ color: "white" }} />
+                <img src={rightArrowInverted.src} style={{ color: "white" }} alt="Navigation Arrow"/>
               ) : (
                 <></>
               )}

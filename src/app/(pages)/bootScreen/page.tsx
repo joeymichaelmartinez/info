@@ -36,7 +36,7 @@ export default function BootScreen() {
   useEffect(() => {
     if (!done) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = () => {
         router.push("/homeScreen");
     };
 

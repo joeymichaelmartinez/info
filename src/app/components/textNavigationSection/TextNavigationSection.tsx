@@ -19,7 +19,7 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
 
   const router = useRouter();
 
-  const allItems = ["Welcome to Joey's Portfolio!", ...navigationItems];
+  const allItems = ["Welcome to Joey\'s Portfolio!", ...navigationItems];
 
   const [currentSelected, setCurrentSelected] = useState(0);
   const [currentTypingIndex, setCurrentTypingIndex] = useState(0);
@@ -30,6 +30,18 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     1: "/Bio",
     2: "/resume/JosephMartinezResume.pdf",
     3: "/Adventure",
+  }
+
+  const handleClickNavigation = (index: number) => {
+    if (index === 2) {
+        const link = document.createElement("a");
+        link.href = "/resume/JosephMartinezResume.pdf";
+        link.download = "JosephMartinezResume.pdf";
+        link.click();
+      } else {
+        const path = navigationMap[index];
+        if(path) router.push(path);
+      }
   }
 
   const handleNextItem = () => {
@@ -50,7 +62,7 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentSelected]);
+  }, [handleClickNavigation, currentSelected]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -64,18 +76,6 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [navigationItems.length]);
-
-  const handleClickNavigation = (index: number) => {
-    if (index === 2) {
-        const link = document.createElement("a");
-        link.href = "/resume/JosephMartinezResume.pdf";
-        link.download = "JosephMartinezResume.pdf";
-        link.click();
-      } else {
-        const path = navigationMap[index];
-        if(path) router.push(path);
-      }
-  }
 
   const itemsToRender = allItems.slice(0, currentTypingIndex);
 

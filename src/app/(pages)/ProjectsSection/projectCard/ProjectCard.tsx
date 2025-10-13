@@ -63,7 +63,7 @@ function ProjectCard({
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription asChild>
               <div>
-                <img src={image.src} alt="Modal" className="mb-4 rounded-md w-full" />
+                <img src={image.src} alt="Modal Image" className="mb-4 rounded-md w-full" />
                 <p>{fullDescription}</p>
               </div>
             </DialogDescription>

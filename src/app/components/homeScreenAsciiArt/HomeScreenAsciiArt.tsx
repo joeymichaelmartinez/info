@@ -25,7 +25,7 @@ export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtPro
       onComplete?.();
       return;
     }
-  }, [deviceType]);
+  }, [deviceType, onComplete]);
 
   return (
     (deviceType === "desktop" ? <div className={style.homeScreenAsciiArt}>
@@ -34,7 +34,7 @@ export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtPro
         <></>
       }
     </div> :
-      <img className={style.mobileAsciiImage} src={asciiArt.src} />
+      <img className={style.mobileAsciiImage} src={asciiArt.src} alt="Mobile Ascii Art" />
     )
   );
 }
