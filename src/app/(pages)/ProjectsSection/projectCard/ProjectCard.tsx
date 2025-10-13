@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import "./ProjectCard.css";
+import Link from "next/link";
 
 interface ProjectCardProps {
   image: HTMLImageElement;
@@ -70,14 +71,14 @@ function ProjectCard({
           </DialogHeader>
 
           <div className="flex justify-between items-center mt-4">
-            <a
-              href={link}
+            <Link
+              href={link || ''}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline"
             >
               Link to GitHub
-            </a>
+            </Link>
             <Button variant="secondary" onClick={() => setIsDialogOpen(false)}>
               Close
             </Button>

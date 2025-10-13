@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useCallback } from "react";
 import TypingText from "../../utils/typingText/TypingText";
 import { useRouter } from "next/navigation";
 import style from './TextNavigationSection.module.css';
@@ -18,43 +19,35 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
   ];
 
   const router = useRouter();
+  const deviceType = useDeviceType();
 
-  const allItems = ["Welcome to Joey\'s Portfolio!", ...navigationItems];
+  const navigationMap: Record<number, string> = {
+    0: "/ProjectsSection",
+    1: "/Bio",
+    3: "/Adventure",
+  };
 
   const [currentSelected, setCurrentSelected] = useState(0);
   const [currentTypingIndex, setCurrentTypingIndex] = useState(0);
 
-  const deviceType = useDeviceType();
-  const navigationMap: Record<number,string> = {
-    0: "/ProjectsSection",
-    1: "/Bio",
-    2: "/resume/JosephMartinezResume.pdf",
-    3: "/Adventure",
-  }
-
-  const handleClickNavigation = (index: number) => {
+  const handleClickNavigation = useCallback((index: number) => {
     if (index === 2) {
-        const link = document.createElement("a");
-        link.href = "/resume/JosephMartinezResume.pdf";
-        link.download = "JosephMartinezResume.pdf";
-        link.click();
-      } else {
-        const path = navigationMap[index];
-        if(path) router.push(path);
+      window.open("/info/resume/JosephMartinezResume.pdf", "_blank");
+    } else {
+      const path = navigationMap[index];
+      if (path && path !== window.location.pathname) {
+        router.push(path);
       }
-  }
+    }
+  }, [router]);
 
-  const handleNextItem = () => {
-    setCurrentTypingIndex((prev) => prev + 1);
-  };
+  const handleNextItem = () => setCurrentTypingIndex((prev) => prev + 1);
 
   useEffect(() => {
-    if (startTyping && currentTypingIndex === 0) {
-      handleNextItem();
-    }
+    if (startTyping && currentTypingIndex === 0) handleNextItem();
   }, [startTyping, currentTypingIndex]);
 
-  useEffect(()=>{
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         handleClickNavigation(currentSelected);
@@ -62,7 +55,7 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleClickNavigation, currentSelected]);
+  }, [currentSelected, handleClickNavigation]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -77,44 +70,50 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [navigationItems.length]);
 
+  const allItems = ["Welcome to Joey's Portfolio!", ...navigationItems];
   const itemsToRender = allItems.slice(0, currentTypingIndex);
 
   return (
-  <div className={style.textNavigationSection}>
-    {itemsToRender.length > 0 && (
-      <p>
-        <TypingText
-          text={allItems[0]}
-          speed={5}
-          onComplete={
-            currentTypingIndex < allItems.length ? handleNextItem : undefined
-          }
-        />
-      </p>
-    )}
-
-    <div className={style.selectableContainer}>
-      {itemsToRender.slice(1).map((item, index) => (
-        <p 
-          className={`${deviceType==='desktop' && style.selectableItem} ${index === currentSelected ? style.selectedItem : ""}`} 
-          key={index}
-        >
-          <a onClick={()=> handleClickNavigation(index)}>
-            {deviceType==='desktop' && index === currentSelected ? "[>]" : deviceType==='desktop' ? "[ ]" : ""}{" "}
-            <TypingText
-              text={item}
-              speed={10}
-              onComplete={
-                index + 1 === itemsToRender.length - 1 &&
-                currentTypingIndex < allItems.length
-                  ? handleNextItem
-                  : undefined
-              }
-            />
-          </a>
+    <div className={style.textNavigationSection}>
+      {itemsToRender.length > 0 && (
+        <p>
+          <TypingText
+            text={allItems[0]}
+            speed={5}
+            onComplete={currentTypingIndex < allItems.length ? handleNextItem : undefined}
+          />
         </p>
-      ))}
+      )}
+
+      <div className={style.selectableContainer}>
+        {itemsToRender.slice(1).map((item, index) => {
+          const isSelected = index === currentSelected;
+
+          return (
+            <p
+              className={`${deviceType === 'desktop' && style.selectableItem} ${isSelected ? style.selectedItem : ""}`}
+              key={index}
+            >
+              <button
+                className={style.navButton}
+                onClick={() => handleClickNavigation(index)}
+              >
+                {deviceType === 'desktop' ? (isSelected ? "[>]" : "[ ]") : ""}
+                {" "}
+                <TypingText
+                  text={item}
+                  speed={10}
+                  onComplete={
+                    index + 1 === itemsToRender.length - 1 && currentTypingIndex < allItems.length
+                      ? handleNextItem
+                      : undefined
+                  }
+                />
+              </button>
+            </p>
+          );
+        })}
+      </div>
     </div>
-  </div>
-);
+  );
 }

@@ -7,6 +7,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import style from "./Bio.module.css";
 import useDeviceType from '@/app/utils/deviceType/useDeviceType';
+import Link from 'next/link';
 
 const Bio: FC = () => {
   const deviceType = useDeviceType();
@@ -41,22 +42,22 @@ const Bio: FC = () => {
 
         
           <div className={`${style.flexSocial}`}>
-            <a href="/resume/JosephMartinezResume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/resume/JosephMartinezResume.pdf" target="_blank" rel="noopener noreferrer">
               <Button className={style.resumeButton} size="lg">
                 Download Resume
               </Button>
-            </a>
+            </Link>
 
             <div className={style.socialLinks}>
-              <a href="https://github.com/joeymichaelmartinez">
+              <Link href="https://github.com/joeymichaelmartinez">
                 <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="https://www.linkedin.com/in/joeymichaelmartinez/">
+              </Link>
+              <Link href="https://www.linkedin.com/in/joeymichaelmartinez/">
                 <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-              <a href="mailto:joeymichaelmartinez@gmail.com">
+              </Link>
+              <Link href="mailto:joeymichaelmartinez@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

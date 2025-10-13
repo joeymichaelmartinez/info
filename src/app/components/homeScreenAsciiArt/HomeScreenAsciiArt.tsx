@@ -13,7 +13,7 @@ export default function HomeScreenAsciiArt({ onComplete }: HomeScreenAsciiArtPro
   const deviceType = useDeviceType();
   useEffect(() => {
     const getAsciiArt = async () => {
-      const asciiArtPromise = await fetch("/ascii/asciiArt.txt");
+      const asciiArtPromise = await fetch("/info/ascii/asciiArt.txt");
       const asciiArt = await asciiArtPromise.text();
       setScrollingBootText(asciiArt);
     };
