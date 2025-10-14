@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint",
   "predeploy": "npm run static",
-  "static": "next build && npx next export && node -e \"require('fs').writeFileSync('./out/.nojekyll', '')\"",
-  "deploy": "gh-pages -d out -t true"
+  "static": "next build && node -e \"require('fs').writeFileSync('./out/.nojekyll', '')\"",
+  "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
