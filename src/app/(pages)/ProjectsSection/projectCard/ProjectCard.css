@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   min-height: 80vh;
-  padding: 4rem;
+  padding: 1rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 
@@ -29,7 +29,7 @@
 
 .project-selector {
   position: absolute;
-  left: calc(-5rem);
+  left: calc(-3rem);
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
@@ -51,7 +51,7 @@
   background-color: rgb(27, 27, 39);
   height: 100%;
   width: 100%;
-  max-width: 350px;
+  max-width: 500px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -61,7 +61,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 150px;
+  max-height: 200px;
   overflow: hidden;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -73,6 +73,10 @@
   object-fit: contain;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.invert-svg-colors[src$=".svg"] {
+  filter: brightness(0) invert(1);
 }
 
 #Card-Text {
@@ -104,7 +108,7 @@
   overflow-y: auto;
 }
 
-#Modal-Image {
+.Modal-Image {
   max-width: 100%;
   max-height: 100%;
   padding: 10px;

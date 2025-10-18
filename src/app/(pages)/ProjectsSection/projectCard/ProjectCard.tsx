@@ -19,6 +19,7 @@ interface ProjectCardProps {
   isDesktop?: boolean;
   isDialogOpen?: boolean;
   key: number;
+  index: number;
   setIsDialogOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -31,6 +32,7 @@ function ProjectCard({
   isDesktop,
   isDialogOpen,
   setIsDialogOpen,
+  index,
 }: ProjectCardProps) {
   return (
     <Dialog open={isDialogOpen}>
@@ -40,7 +42,7 @@ function ProjectCard({
         onClick={() => setIsDialogOpen(true)}
       >
         <div id="Card-Image">
-          <img src={image.src} alt="Project" className="rounded-t-lg w-full" />
+          <img src={image.src} alt="Project" className={`rounded-t-lg w-full ${index !==0 ? 'invert-svg-colors' : ''}`} />
         </div>
         <div id="Card-Text" className="p-4">
           <h3 id="Card-Title" className="font-bold text-lg">
@@ -54,7 +56,7 @@ function ProjectCard({
         </div>
       </div>
 
-      {isDialogOpen && ( // only render when open
+      {isDialogOpen && (
         <DialogContent 
           onEscapeKeyDown={() => setIsDialogOpen(false)} 
           onPointerDownOutside={() => setIsDialogOpen(false)} 
@@ -63,8 +65,8 @@ function ProjectCard({
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription asChild>
-              <div>
-                <img src={image.src} alt="Modal Image" className="mb-4 rounded-md w-full" />
+              <div className={`Modal-Image ${index !==0 ? 'invert-svg-colors' : ''}`}>
+                <img src={image.src} alt="Modal Image" className={`mb-4 rounded-md w-full ${index !==0 ? 'invert-svg-colors' : ''}`} />
                 <p>{fullDescription}</p>
               </div>
             </DialogDescription>

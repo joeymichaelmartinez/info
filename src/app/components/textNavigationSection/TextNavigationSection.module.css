@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   font-size: 40px;
-  margin-left: 40px;
   text-align: center;
 }
 
@@ -15,9 +14,9 @@
 .selectableContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  width: fit-content; 
-  max-width: 600px; 
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 600px;
 }
 
 .selectableItem {
@@ -30,7 +29,48 @@
   color: oklch(50% 0.3 260); /* brighter on hover */
 }
 
-.selectableItem.selectedItem:not(:hover) {
-  color: oklch(35.6% 0.21216 264.118); /* selected but not hovered */
+
+
+/* ---------- MOBILE-ONLY ENHANCEMENTS ---------- */
+.mobileNavigation .selectableItem {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.1s ease, text-shadow 0.1s ease;
 }
 
+/* Tap feedback */
+.mobileNavigation .selectableItem:active {
+  transform: scale(0.97);
+  text-shadow: 0 0 8px oklch(70% 0.25 260);
+}
+
+/* Tap hint (adds ▶) */
+.mobileNavigation .selectableItem::after {
+  content: " >";
+  opacity: 0.6;
+  margin-left: 0.25rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .mobileNavigation .selectableContainer {
+    align-items: center;
+    
+  }
+
+  .mobileNavigation .selectableItem {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .selectableItem.selectedItem:not(:hover) {
+    color: oklch(35.6% 0.21216 264.118);
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .mobileNavigation .selectableItem {
+    text-align: center;
+    font-size: 30px;
+  }
+}

@@ -85,13 +85,16 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
         </p>
       )}
 
-      <div className={style.selectableContainer}>
+      <div className={`${style.selectableContainer} ${
+        deviceType === 'mobile' ? style.mobileNavigation : ""
+        }`}
+      >
         {itemsToRender.slice(1).map((item, index) => {
           const isSelected = index === currentSelected;
 
           return (
             <p
-              className={`${deviceType === 'desktop' && style.selectableItem} ${isSelected ? style.selectedItem : ""}`}
+              className={`${style.selectableItem} ${isSelected ? style.selectedItem : ""}`}
               key={index}
             >
               <button

@@ -106,6 +106,7 @@ function Projects() {
 
             <ProjectCards
               key={index}
+              index={index}
               isDesktop={isDesktop}
               title={project.title}
               fullDescription={project.fullDescription}
