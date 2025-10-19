@@ -7,6 +7,7 @@ import { projectInfo } from "@/data/projectInfo";
 import rightArrowInverted from "../../../../public/images/right-arrow-inverted.png";
 import useDeviceType from "@/app/utils/deviceType/useDeviceType";
 import InputHints from "@/app/components/inputHints/InputHints";
+import ReturnHomeScreenButton from "@/app/utils/navigation/ReturnToHomeScreenButton";
 
 
 function Projects() {
@@ -124,6 +125,7 @@ function Projects() {
         `Use ↑ ↓ → ← to navigate, Enter to select, or click a card to reveal project info!` :
         `Tap each card to reveal project info!`
       }/>
+      <ReturnHomeScreenButton />
       </div>
   );
 }
