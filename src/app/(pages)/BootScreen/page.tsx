@@ -20,14 +20,21 @@ export default function BootScreen() {
   useEffect(() => {
     if (step === 1) {
       let i = 0;
+      let randomIndexesUsed = new Set<number>();
       const interval = setInterval(() => {
-        setDisplayedLines((prev) => [...prev, lines[i]]);
+        let randomBootLineIndex: number;
+      do {
+        randomBootLineIndex = Math.floor(Math.random() * lines.length);
+      } while (randomIndexesUsed.has(randomBootLineIndex));
+
+      randomIndexesUsed.add(randomBootLineIndex);
+        setDisplayedLines((prev) => [...prev, lines[randomBootLineIndex]]);
         i++;
-        if (i >= lines.length) {
+        if (i >= 6) {
           clearInterval(interval);
-          setTimeout(() => setDone(true), 100);
+          setTimeout(() => setDone(true), 1000);
         }
-      }, 800);
+      }, 600);
 
       return () => clearInterval(interval);
     }
@@ -45,7 +52,8 @@ export default function BootScreen() {
   }, [done, router]);
 
   return (
-    <div onClick={() => router.push("/HomeScreen")} className={styles.bootText}>
+    
+    <div onClick={(e) => done ? router.push("/HomeScreen"): e.preventDefault()} className={`${styles.bootText} h-full`}>
       <div className={styles.initialBootText}>
         {step === 0 && <div className={styles.blink}>Booting...</div>}
         {!done && step >= 1 &&
@@ -72,4 +80,11 @@ const lines = [
   "Generating witty loading messages...",
   "Swapping time and space...",
   "Adjusting flux capacitor...",
+  "Tokenizing real life...",
+  "Bending the spoon...",
+  "Swimming to the moon...",
+  "Creating time-loop inversion field",
+  "[info] All systems nominal",
+  "[error] Unexpected level of curiosity detected",
+  "[fix] Curiosity normalized to safe levels",
 ];

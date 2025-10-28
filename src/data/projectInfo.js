@@ -2,10 +2,31 @@ import Pokeball from "../../public/images/Pokeball.svg";
 import DatabaseIcon from '../../public/images/DatabaseIcon.png';
 import UsabilityStudy from '../../public/images/Usability-Test.svg';
 import Search from '../../public/images/search.svg';
-import J4Icon from '../../public/images/J4-Icon.png';
-import BallBreaking from '../../public/images/BallBreaking.png';
+import spaceIcon from '../../public/images/spaceIcon.svg'
+import Gears from '../../public/images/gears.png';
 
 export const projectInfo = [
+  {
+    title: `Space Listing Full Stack Project`,
+    description: `Full-Stack GraphQL, Apollo Server, & React Application`,
+    fullDescription: `A full-stack application enabling users to add and 
+    remove space listings through a React frontend integrated with a GraphQL API 
+    using Apollo Server. Designed GraphQL mutations and queries 
+    to support dynamic content updates, demonstrating strong understanding of API design, 
+    state management, and component-driven architecture in TypeScript.`,
+    image: spaceIcon,
+    link: "https://github.com/joeymichaelmartinez/Space-Listings-GraphQL-React-Full-Stack-Project"
+  },
+  {
+    title: `Mini ERP Project`,
+    description: `Java Spring Boot & MySQL Application`,
+    fullDescription: `This project is a lightweight ERP system built with Spring Boot, Java, and MySQL 
+    that manages customers, products, and orders. It includes features like stock tracking, order 
+    lifecycle management, and automatic calculation of order totals. The system enforces rules around 
+    order status, ensuring data integrity while providing full CRUD operations through a RESTful API.`,
+    image: Gears,
+    link: "https://github.com/joeymichaelmartinez/MiniERP"
+  },
   {
     title: `Web Front-end API`,
     description: `A front-end design integrated with a pre-existing API`,
@@ -32,30 +53,11 @@ export const projectInfo = [
     link: "https://github.com/joeymichaelmartinez/Usability-Study"
   },
   {
-    title: `Direct Manipulation UI`,
-    description: `A ball breaker game using gyroscope movement`,
-    fullDescription: `A simple ball breaker game meant to demonstrate UI design that uses direct manipulation. 
-                      Users can drag or create more balls, create walls for the balls to break, or delete anything 
-                      they've created so far. All of these actions use various different gestures that are all 
-                      some form of direct manipulation.`,
-    image: BallBreaking,
-    link: "https://github.com/joeymichaelmartinez/Direct-Manipulation"
-  },
-  {
     title: `Autocomplete`,
     description: `An implementation of autocomplete using ternary trees`,
     fullDescription: `While learning Java and Data Structures, I put together a project that would demonstrate how 
                       ternary trees are the perfect candidate to implement the common tasks necessary to perform autocomplete`,
     image: Search,
     link: "https://github.com/joeymichaelmartinez/Autocompleter"
-  },
-  {
-    title: `J4 Lang`,
-    description: `A scripting language that emphasizes readability`,
-    fullDescription: `J4 is a scripting language built for LMU's compilers course. It is meant to simplify basic coding constructs 
-                      so that they are more readable and more easily understood. It is a statically and strongly typed language based
-                      on Python and Javascript`,
-    image: J4Icon,
-    link: "https://github.com/joeymichaelmartinez/J4-Lang"
   }
 ];

@@ -2,7 +2,7 @@ import BootScreen from './(pages)/BootScreen/page';
 
 export default function Home() {
   return (
-    <div>
+    <div className='h-full'>
       <BootScreen />
     </div>
   );

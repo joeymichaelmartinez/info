@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -9,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import "./ProjectCard.css";
 import Link from "next/link";
+import { X, XIcon } from "lucide-react";
 
 interface ProjectCardProps {
   image: HTMLImageElement;
@@ -35,14 +37,14 @@ function ProjectCard({
   index,
 }: ProjectCardProps) {
   return (
-    <Dialog open={isDialogOpen}>
+    <Dialog open={isDialogOpen} >
       <div
         id="card"
         className="cursor-pointer border rounded-lg shadow-md hover:shadow-lg transition"
         onClick={() => setIsDialogOpen(true)}
       >
         <div id="Card-Image">
-          <img src={image.src} alt="Project" className={`rounded-t-lg w-full ${index !==0 ? 'invert-svg-colors' : ''}`} />
+          <img src={image.src} alt="Project" className={`rounded-t-lg w-full ${index !==2 ? 'invert-svg-colors' : ''}`} />
         </div>
         <div id="Card-Text" className="p-4">
           <h3 id="Card-Title" className="font-bold text-lg">
@@ -60,13 +62,18 @@ function ProjectCard({
         <DialogContent 
           onEscapeKeyDown={() => setIsDialogOpen(false)} 
           onPointerDownOutside={() => setIsDialogOpen(false)} 
-          className="max-w-lg"
+          className="max-w-lg [&>button:last-child]:hidden"
         >
+          <DialogClose asChild onClick={() => setIsDialogOpen(false)}>
+          <button className="absolute top-2 right-2 p-2 rounded hover:bg-gray-200">
+            <X size={20} />
+          </button>
+        </DialogClose>
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription asChild>
-              <div className={`Modal-Image ${index !==0 ? 'invert-svg-colors' : ''}`}>
-                <img src={image.src} alt="Modal Image" className={`mb-4 rounded-md w-full ${index !==0 ? 'invert-svg-colors' : ''}`} />
+              <div className={`Modal-Image ${index !==2 ? 'invert-svg-colors' : ''}`}>
+                <img src={image.src} alt="Modal Image" className={`mb-4 rounded-md w-full ${index !==2 ? 'invert-svg-colors' : ''}`} />
                 <p>{fullDescription}</p>
               </div>
             </DialogDescription>
