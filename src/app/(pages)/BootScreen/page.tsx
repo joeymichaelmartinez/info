@@ -20,7 +20,7 @@ export default function BootScreen() {
   useEffect(() => {
     if (step === 1) {
       let i = 0;
-      let randomIndexesUsed = new Set<number>();
+      const randomIndexesUsed = new Set<number>();
       const interval = setInterval(() => {
         let randomBootLineIndex: number;
       do {
