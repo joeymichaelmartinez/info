@@ -15,7 +15,7 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
     "View Portfolio",
     "Learn About Me",
     "Download Resume",
-    "Start Adventure Mode",
+    "Start Interactive Mode",
   ];
 
   const router = useRouter();
@@ -24,7 +24,7 @@ export default function TextNavigationSection({ startTyping = false }: TextNavig
   const navigationMap: Record<number, string> = {
     0: "/ProjectsSection",
     1: "/Bio",
-    3: "/Adventure",
+    3: "/InteractiveMode",
   };
 
   const [currentSelected, setCurrentSelected] = useState(0);

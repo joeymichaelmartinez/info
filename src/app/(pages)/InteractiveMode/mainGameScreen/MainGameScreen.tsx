@@ -34,7 +34,7 @@ interface GameSettings {
   padding: number;
 }
 
-export default function Adventure() {
+export default function MainGameScreen() {
   const viewPortRef = useRef<HTMLDivElement>(null);
   const catcherRef = useRef<HTMLDivElement>(null);
   const deviceType = useDeviceType();
@@ -287,12 +287,12 @@ export default function Adventure() {
   }, [viewPortDimensions.height, catcherDimensions.width, catcherAscii, gameWinState, gameOver, missedItems]);
 
   useEffect(() => {
-    // Hide back button when the game mounts
-    setHide(true);
-
-    // Show it again when the game unmounts
-    return () => setHide(false);
-  }, [setHide]);
+    if (gameWinState || gameOver) {
+      setHide(false);
+    } else {
+      setHide(true);
+    }
+  }, [gameWinState, gameOver, setHide]);
 
 
   const handleRestart = () => {
