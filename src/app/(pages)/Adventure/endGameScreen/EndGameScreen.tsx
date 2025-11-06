@@ -11,7 +11,7 @@ export default function EndGameScreen({ win, handleRestart }: EndGameScreenProps
     <div className={style.endGameScreen}>
       {win ? 
         <div className={style.endGameScreenText}>
-            Congratulations! You collected all of Joey's skills and experiences! 🎉
+            Congratulations! You collected all of Joey&apos;s skills and experiences! 🎉
         </div> :
         <div className={style.endGameScreenText}>
           Unfortunately, you missed some items! Press restart to try again!

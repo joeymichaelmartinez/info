@@ -28,8 +28,22 @@ const ProgressSideBar: React.FC<ProgressSideBarProps> = ({ progressByCategory })
 
         return (
           <div key={category} style={{ marginBottom: "20px" }}>
-            <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>{category}</h3>
-            <div style={{ fontSize: "14px", marginBottom: "5px" }}>
+            <h3 style={{
+              marginBottom: "5px", 
+              textTransform: "uppercase", 
+              userSelect: "none",
+              WebkitUserSelect: "none",
+              WebkitTapHighlightColor: "transparent",
+              touchAction: "none",
+            }}>{category}</h3>
+            <div style={{
+              fontSize: "14px", 
+              marginBottom: "5px", 
+              userSelect: "none",
+              WebkitUserSelect: "none",
+              WebkitTapHighlightColor: "transparent",
+              touchAction: "none",
+            }}>
               {caughtCount} / {totalCount} caught
             </div>
             <div style={{ height: "12px", backgroundColor: "#333", borderRadius: "6px", overflow: "hidden" }}>

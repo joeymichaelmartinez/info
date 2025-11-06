@@ -309,7 +309,8 @@ export default function Adventure() {
         style={{
           display: "flex",
           flexDirection: window.innerWidth < 768 ? "column" : "row",
-          height: "100%",
+          height: "100dvh",
+          maxHeight: "100dvh"
         }}
       >
       <div ref={viewPortRef} style={{ flex: 1, position: "relative", overflow: "hidden" }}>
@@ -322,7 +323,11 @@ export default function Adventure() {
               top: item.position.top, 
               left: item.position.left, 
               fontSize: gameSettings.fallingTextFontSize, 
-              fontFamily: "monospace", whiteSpace: "pre" 
+              fontFamily: "monospace", whiteSpace: "pre",
+              userSelect: "none",
+              WebkitUserSelect: "none",
+              WebkitTapHighlightColor: "transparent",
+              touchAction: "none",
             }}>
               {item.text}
             </div>
@@ -338,7 +343,11 @@ export default function Adventure() {
             fontFamily: "monospace", 
             fontSize: gameSettings.catcherFontSize, 
             whiteSpace: "pre", 
-            lineHeight: "1em" 
+            lineHeight: "1em",
+            userSelect: "none",
+            WebkitUserSelect: "none",
+            WebkitTapHighlightColor: "transparent",
+            touchAction: "none",
           }}
         >
           {catcherAscii}
@@ -367,7 +376,11 @@ export default function Adventure() {
                 borderRadius: "50%",
                 backgroundColor: "#333",
                 color: "white",
-                opacity: '40%'
+                opacity: '40%',
+                userSelect: "none",
+                WebkitUserSelect: "none",
+                WebkitTapHighlightColor: "transparent",
+                touchAction: "none",
               }}
             >
               {'\<'}
@@ -382,7 +395,11 @@ export default function Adventure() {
                 borderRadius: "50%",
                 backgroundColor: "#333",
                 color: "white",
-                opacity: '40%'
+                opacity: '40%',
+                userSelect: "none",
+                WebkitUserSelect: "none",
+                WebkitTapHighlightColor: "transparent",
+                touchAction: "none",
               }}
             >
               {'\>'}
